@@ -1,0 +1,63 @@
+.sidebar-filter {
+    padding: 15px 30px 30px;
+    color: $color-light;
+
+    @media (min-width: 992px) {
+        border-right: 1px solid $color-light;
+        background-color: rgba($color-light, 0.25);
+    }
+
+    @media (max-width: 991px) {
+        border-right: 1px solid $color-light;
+    }
+
+    legend {
+        font-weight: bold;
+    }
+
+    .form-check {
+        margin: 10px 0;
+
+        &-label {
+            margin-left: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        &-input {
+            width: 0;
+            height: 0;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:checked {
+                &::before {
+                    background-color: $color-light;
+                }
+            }
+
+            &::before {
+                display: block;
+                width: 0.8rem;
+                height: 0.8rem;
+                margin-top: 0.35rem;
+                content: "";
+                border: 1px solid $color-light;
+            }
+        }
+    }
+
+    &_more {
+        display: block;
+        margin-bottom: 30px;
+        color: $color-light;
+        font-size: 1.25rem;
+    }
+
+    &_submit {
+        border: 1px solid $color-light;
+        border-radius: 0;
+        background-color: $color-light;
+    }
+}

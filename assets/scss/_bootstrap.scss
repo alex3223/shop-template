@@ -1,0 +1,45 @@
+.navbar {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $color-dark;
+    font-size: 1.2rem;
+    white-space: nowrap; 
+}
+
+.navbar-nav {
+    @media (min-width: 992px) {
+        width: calc(100% - 300px);
+        padding-right: 30px;
+        padding-left: 70px;
+
+        > .nav-item {
+            text-align: center;
+            flex-grow: 1;
+
+            :not(.show) {
+                border-left: 1px solid $color-dark;
+            }
+
+            &:last-child {
+                border-right: 1px solid $color-dark;
+            }
+        }
+    }
+}
+
+.btn-outline-success {
+    color: $color-dark;
+    border-color: $color-dark;
+    border-radius: 0;
+
+    &:hover {
+        color: $color-light;
+        border-color: $color-dark;
+        background-color: $color-dark;
+    }
+}
